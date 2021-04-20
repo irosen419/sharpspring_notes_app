@@ -23,9 +23,11 @@
                 h4.title {
                     display: flex;
                     justify-content: space-between;
-                    
+                    font-weight: bold;
+
                     span.author-and-time {
                         font-size: .85em;
+                        font-weight: lighter;
                     }
                 }
 

@@ -1,0 +1,16 @@
+<h1>Welcome <%=@user.first_name%>!</h1>
+<div id="user-notes">
+    <h2>Your Notes</h2>
+    <div id="notes-list">
+        <% @notes.order('created_at DESC').each do |note| %>
+            <div class="note"> 
+                <h4><%= note.title %> (created by <%= note.user.full_name %>, <%= note.time_created %>)</h4>
+                <p><%= note.body %></p>
+                <div class="buttons">
+                    <%= button_to 'Edit Note', edit_note_path(note), method: :get, class: "bottom-buttons btn btn-primary" %>
+                    <%= button_to 'Delete Note', note_path(note), method: :delete, class: "bottom-buttons btn btn-danger" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

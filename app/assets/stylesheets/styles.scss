@@ -1,0 +1,28 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #user-notes {
+        width: 100%;
+        padding: 0 5%;
+
+        #notes-list {
+            width: 100%;
+
+            .note {
+                margin: 50px 0;
+                padding: 20px;
+                border: 1px solid gray;
+
+                .buttons {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}

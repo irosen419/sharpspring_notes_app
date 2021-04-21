@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Ian Rosen's SharpSpring Ads NoteTaker application!
 
-Things you may want to cover:
+To see this app in all its glory, please visit https://desolate-taiga-33110.herokuapp.com/.
 
-* Ruby version
+To locally run this app... 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1) Clone the repository (fork if you wish).
+2) Navigate to the root directory of the application and run the following steps to install the required gems and create and migrate the database...
+    a) ```bundle install```
+    b) ```rails db:setup```
+3) Finally, run the command ```rails s``` to start up the server and navigate to http://localhost:3000/. This will take you the Log In page of the application. From there, you can Sign Up and enjoy everything the application has to offer!

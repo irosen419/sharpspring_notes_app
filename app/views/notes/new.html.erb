@@ -5,16 +5,10 @@
       <%= render 'errors' %>
       <div class="mt-3 mb-3">
         <%= f.text_field :title, placeholder: "Note Title", class: "form-control" %>
-        <div class="invalid-feedback">
-          <%= @note.errors[:description].join if @note.errors[:description].any? %>
-        </div>
       </div>
 
       <div class="mt-3 mb-3">
         <%= f.text_area :body, placeholder: "Note Title", class: "form-control" %>
-        <div class="invalid-feedback">
-          <%= @note.errors[:description].join if @note.errors[:description].any? %>
-        </div>
       </div>
 
       <%= f.submit "Submit Note", class: "btn btn-primary btn-lg" %>

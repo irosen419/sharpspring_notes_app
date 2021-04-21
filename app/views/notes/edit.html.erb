@@ -6,19 +6,13 @@
     <%= form_for @note, html: {class: "was-validated"} do |f| %>
       <div class="mt-3 mb-3">
         <%= f.text_field :title, value: @note.title, class: "form-control is-invalid" %>
-        <div class="invalid-feedback">
-          <%= @note.errors[:description].join if @note.errors[:description].any? %>
-        </div>
       </div>
 
       <div class="mt-3 mb-3">
         <%= f.text_area :body, value: @note.body, class: "form-control is-invalid" %>
-        <div class="invalid-feedback">
-          <%= @note.errors[:description].join if @note.errors[:description].any? %>
-        </div>
       </div>
 
-      <%= f.submit "Post", class: "btn btn-primary" %>
+      <%= f.submit "Confirm Edit", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

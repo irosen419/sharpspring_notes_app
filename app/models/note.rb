@@ -5,6 +5,6 @@ class Note < ApplicationRecord
     validates :body, length: { maximum: 1000, message: ": 1000 characters is the maximum allowed" }
 
     def time_created
-        self.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%A %l:%M%P")
+        self.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%A at %l:%M%P")
     end
 end

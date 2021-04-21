@@ -7,7 +7,7 @@
         <% end %>
         <% @notes.order('created_at DESC').each do |note| %>
             <div class="note"> 
-                <h4 class="title"><%= note.title %> <span class="author-and-time">Created by <%= note.user.full_name %> at <%= note.time_created %></span></h4>
+                <h4 class="title"><%= note.title %> <span class="author-and-time">Created by <%= note.user.full_name %>, <%= note.time_created %></span></h4>
                 <p><%= note.body %></p>
                 <div class="buttons">
                     <%= button_to 'Edit Note', edit_note_path(note), method: :get, class: "bottom-buttons btn btn-primary" %>

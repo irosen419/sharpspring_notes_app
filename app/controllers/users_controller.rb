@@ -8,7 +8,8 @@ class UsersController < ApplicationController
     end
 
     def show
-        @notes = Note.where("user_id" == current_user.id)
+        # byebug
+        @notes = Note.where(user_id: current_user.id)
         render 'show'
     end
 

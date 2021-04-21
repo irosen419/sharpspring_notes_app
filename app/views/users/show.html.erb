@@ -2,6 +2,9 @@
 <div id="user-notes">
     <h2>Your Notes</h2>
     <div id="notes-list">
+        <% if @notes.empty? %>
+            <h4>You dont have any notes yet! Compose your first note <%= link_to 'here', new_note_path %>!</h4>
+        <% end %>
         <% @notes.order('created_at DESC').each do |note| %>
             <div class="note"> 
                 <h4 class="title"><%= note.title %> <span class="author-and-time">Created by <%= note.user.full_name %> at <%= note.time_created %></span></h4>
